@@ -122,7 +122,7 @@ wait = {
     "sticker":False,
     "selfbot":True,
     "mention":"粗乃聊天(=ﾟωﾟ)ﾉ",
-    "Respontag":"我是莫言開發的防翻(v1)\n有事請找作者♪\nhttps://line.me/ti/p/4-LFlTx31f",
+    "Respontag":"有事請找作者♪",
     "welcome":"歡迎加入",
     "comment":"666",
     "message":"安安 感謝您加我好友\n我的作者:莫言♡\nhttps://line.me/ti/p/4-LFlTx31f",
@@ -166,13 +166,13 @@ def waktu(secs):
     mins, secs = divmod(secs,60)
     hours, mins = divmod(mins,60)
     days, hours = divmod(hours, 24)
-    return '%02d Hari %02d Jam %02d Menit %02d Detik' % (days, hours, mins, secs)
+    return '%02d 天 %02d 小時 %02d 分鐘 %02d 秒' % (days, hours, mins, secs)
 
 def runtime(secs):
     mins, secs = divmod(secs,60)
     hours, mins = divmod(mins,60)
     days, hours = divmod(hours, 24)
-    return '%02d Hari %02d Jam %02d Menit %02d Detik' % (days, hours, mins, secs)
+    return '%02d 天 %02d 小時 %02d 分鐘 %02d 秒' % (days, hours, mins, secs)
 
 def mentionMembers(to, mid):
     try:
@@ -273,7 +273,7 @@ def sendMention(to, mid, firstmessage):
         hari = hari[:comma]
         teman = cl.getAllContactIdsx()
         gid = cl.getGroupIdsJoined()
-        tz = pytz.timezone("Asia/Jakarta")
+        tz = pytz.timezone("Asia/Taipei")
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
@@ -293,131 +293,128 @@ def command(text):
 def help():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage = "╭━━━━━━━━━━━━━━━╮\n┣🇮🇩🌟🔵ARIFISTIFIK🔵🌟\n╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ MENU ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "Me\n" + \
-                  "┃🇮🇩┃ " + key + "Mid「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Info「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Nk「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Kick1「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Mybot\n" + \
-                  "┃🇮🇩┃ " + key + "Status\n" + \
-                  "┃🇮🇩┃ " + key + "About\n" + \
-                  "┃🇮🇩┃ " + key + "Restart\n" + \
-                  "┃🇮🇩┃ " + key + "Runtime\n" + \
-                  "┃🇮🇩┃ " + key + "Creator\n" + \
-                  "┃🇮🇩┃ " + key + "Speed/Sp\n" + \
-                  "┃🇮🇩┃ " + key + "Sprespon\n" + \
-                  "┃🇮🇩┃ " + key + "Tagall\n" + \
-                  "┃🇮🇩┃ " + key + "Joinall\n" + \
-                  "┃🇮🇩┃ " + key + "Byeall\n" + \
-                  "┃🇮🇩┃ " + key + "Byeme\n" + \
-                  "┃🇮🇩┃ " + key + "Leave「Namagrup」\n" + \
-                  "┃🇮🇩┃ " + key + "Ginfo\n" + \
-                  "┃🇮🇩┃ " + key + "Open\n" + \
-                  "┃🇮🇩┃ " + key + "Close\n" + \
-                  "┃🇮🇩┃ " + key + "Url grup\n" + \
-                  "┃🇮🇩┃ " + key + "Gruplist\n" + \
-                  "┃🇮🇩┃ " + key + "Infogrup「angka」\n" + \
-                  "┃🇮🇩┃ " + key + "Infomem「angka」\n" + \
-                  "┃🇮🇩┃ " + key + "Remove chat\n" + \
-                  "┃🇮🇩┃ " + key + "Lurking「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Lurkers\n" + \
-                  "┃🇮🇩┃ " + key + "Sider「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Updatefoto\n" + \
-                  "┃🇮🇩┃ " + key + "Updategrup\n" + \
-                  "┃🇮🇩┃ " + key + "Updatebot\n" + \
-                  "┃🇮🇩┃ " + key + "Broadcast:「Text」\n" + \
-                  "┃🇮🇩┃ " + key + "Setkey「New Key」\n" + \
-                  "┃🇮🇩┃ " + key + "Mykey\n" + \
-                  "┃🇮🇩┃ " + key + "Resetkey\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ ASIK-ASIK ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "ID line:「Id Line nya」\n" + \
-                  "┃🇮🇩┃ " + key + "Sholat:「Nama Kota」\n" + \
-                  "┃🇮🇩┃ " + key + "Cuaca:「Nama Kota」\n" + \
-                  "┃🇮🇩┃ " + key + "Lokasi:「Nama Kota」\n" + \
-                  "┃🇮🇩┃ " + key + "Music:「Judul Lagu」\n" + \
-                  "┃🇮🇩┃ " + key + "Lirik:「Judul Lagu」\n" + \
-                  "┃🇮🇩┃ " + key + "Ytmp3:「Judul Lagu」\n" + \
-                  "┃🇮🇩┃ " + key + "Ytmp4:「Judul Video」\n" + \
-                  "┃🇮🇩┃ " + key + "Profileig:「Nama IG」\n" + \
-                  "┃🇮🇩┃ " + key + "Cekdate:「tgl-bln-thn」\n" + \
-                  "┃🇮🇩┃ " + key + "Jumlah:「angka」\n" + \
-                  "┃🇮🇩┃ " + key + "Spamtag「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Spamcall:「jumlahnya」\n" + \
-                  "┃🇮🇩┃ " + key + "Spamcall\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ PROTECT ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "Notag「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Semuapro「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Protecturl「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Protectjoin「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Protectkick「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Protectcancel「on/off」\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ SETTING ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "Sticker「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Respon「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Contact「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Autojoin「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Autoadd「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Welcome「on/off」\n" + \
-                  "┃🇮🇩┃ " + key + "Autoleave「on/off」\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ ADMIN ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "Admin:on\n" + \
-                  "┃🇮🇩┃ " + key + "Admin:repeat\n" + \
-                  "┃🇮🇩┃ " + key + "Staff:on\n" + \
-                  "┃🇮🇩┃ " + key + "Staff:repeat\n" + \
-                  "┃🇮🇩┃ " + key + "Bot:on\n" + \
-                  "┃🇮🇩┃ " + key + "Bot:repeat\n" + \
-                  "┃🇮🇩┃ " + key + "Adminadd「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Admindell「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Staffadd「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Staffdell「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Botadd「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Botdell「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Refresh\n" + \
-                  "┃🇮🇩┃ " + key + "Listbot\n" + \
-                  "┃🇮🇩┃ " + key + "Listadmin\n" + \
-                  "┃🇮🇩┃ " + key + "Listprotect\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ FAMS┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n┣🇮🇩━⏩ARIFISTIFIK🇮🇩━⏩\n╰━━━━━━━━━━━━━━━╯\n"
+    helpMessage = "指令表\n──┅━✥ ======= \n" + \
+                  "Me 丟出主機友資\n" + \
+                  "Mid「@」被標註者mid\n" + \
+                  "Info「@」被標註者資訊\n" + \
+                  "Nk「@」標註踢人\n" + \
+                  "Kick1「@」標註多踢\n" + \
+                  "Mybot 丟出機器友資\n" + \
+                  "Status 查看狀態\n" + \
+                  "Restart 重啟\n" + \
+                  "Runtime 運行時間\n" + \
+                  "Creator 作者\n" + \
+                  "Speed/Sp 測速\n" + \
+                  "Sprespon 機器測速\n" + \
+                  "Tagall 標註\n" + \
+                  "Joinall 機器進群\n" + \
+                  "Byeall 機器退群\n" + \
+                  "Byeme 莫言退群\n" + \
+                  "Leave「群名」退出該群\n" + \
+                  "Ginfo 群組資訊\n" + \
+                  "Open 開網址\n" + \
+                  "Close 關網址\n" + \
+                  "Url grup 群組網址\n" + \
+                  "Gruplist 所有群組\n" + \
+                  "Infogrup「數字」群組資訊\n" + \
+                  "Infomem「數字」成員資訊\n" + \
+                  "Remove chat 清除訊息\n" + \
+                  "Lurking「on/off」已讀開/關\n" + \
+                  "Lurkers 查看已讀\n" + \
+                  "Sider「on/off」抓已讀\n" + \
+                  "Updatefoto 更改頭貼\n" + \
+                  "Updategrup 更改群圖\n" + \
+                  "Updatebot 更改機器頭貼\n" + \
+                  "Broadcast:「文字」群組廣播\n" + \
+                  "Setkey「新Key」設定key\n" + \
+                  "Mykey 我的key\n" + \
+                  "Resetkey 重制key\n" + \
+                  "──┅━✥ ======= ✥━┅──\n 媒體指令 \n──┅━✥ ======= ✥━┅──\n" + \
+                  "ID line:「Line Id」\n" + \
+                  "Sholat:「Nama Kota」\n" + \
+                  "Cuaca:「Nama Kota」\n" + \
+                  "Lokasi:「程式名稱」\n" + \
+                  "Music:「歌名」\n" + \
+                  "Lirik:「歌名」\n" + \
+                  "Ytmp3:「音樂」\n" + \
+                  "Ytmp4:「影片」\n" + \
+                  "Profileig:「IG名稱」\n" + \
+                  "Cekdate:「tgl-bln-thn」\n" + \
+                  "Jumlah:「angka」\n" + \
+                  "Spamtag「@」騷擾標註\n" + \
+                  "Spamcall:「次數」\n" + \
+                  "Spamcall 邀通\n" + \
+                  "──┅━✥ ======= ✥━┅──\n 群組指令 \n──┅━✥ ======= ✥━┅──\n" + \
+                  "Semuapro「on/off」\n" + \
+                  "Protecturl「on/off」網址保護\n" + \
+                  "Protectjoin「on/off」入群保護\n" + \
+                  "Protectkick「on/off」防翻保護\n" + \
+                  "Protectcancel「on/off」邀請保護\n" + \
+                  "Sticker「on/off」貼圖id開/關\n" + \
+                  "Respon「on/off」標註回復開/關\n" + \
+                  "Contact「on/off」友資開/關\n" + \
+                  "Autojoin「on/off」自動入群開/關\n" + \
+                  "Autoadd「on/off」自動加友開/關\n" + \
+                  "Welcome「on/off」歡迎訊息開/關\n" + \
+                  "Autoleave「on/off」自離副本開/關\n" + \
+                  "──┅━✥ ======= ✥━┅──\n 權限 \n──┅━✥ ======= ✥━┅──\n" + \
+                  "Admin:on 新增管理員\n" + \
+                  "Admin:repeat\n" + \
+                  "Staff:on 新增第二權限\n" + \
+                  "Staff:repeat\n" + \
+                  "Bot:on 增加分機\n" + \
+                  "Bot:repeat\n" + \
+                  "Adminadd「@」新增管理員\n" + \
+                  "Admindell「@」刪除管理員\n" + \
+                  "Staffadd「@」新增第二權限\n" + \
+                  "Staffdell「@」刪除第二權限\n" + \
+                  "Botadd「@」新增分機\n" + \
+                  "Botdell「@」刪除分機\n" + \
+                  "Refresh 刷新\n" + \
+                  "Listbot 機器名單\n" + \
+                  "Listadmin 權限者名單\n" + \
+                  "Listprotect 防護項目\n" + \
+                  "──┅━✥ ======= ✥━┅──\n 2018©莫言♡™ ──┅━✥ ======= ✥━┅──\n"
     return helpMessage
 
 def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage1 = "──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ BLACKLIST ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "Blc\n" + \
-                  "┃🇮🇩┃ " + key + "Ban:on\n" + \
-                  "┃🇮🇩┃ " + key + "Unban:on\n" + \
-                  "┃🇮🇩┃ " + key + "Ban「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Unban「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Talkban「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Untalkban「@」\n" + \
-                  "┃🇮🇩┃ " + key + "Talkban:on\n" + \
-                  "┃🇮🇩┃ " + key + "Untalkban:on\n" + \
-                  "┃🇮🇩┃ " + key + "Banlist\n" + \
-                  "┃🇮🇩┃ " + key + "Talkbanlist\n" + \
-                  "┃🇮🇩┃ " + key + "Clearban\n" + \
-                  "┃🇮🇩┃ " + key + "Refresh\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ MENU ┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n" + \
-                  "┃🇮🇩┃ " + key + "Cek sider\n" + \
-                  "┃🇮🇩┃ " + key + "Cek spam\n" + \
-                  "┃🇮🇩┃ " + key + "Cek pesan \n" + \
-                  "┃🇮🇩┃ " + key + "Cek respon \n" + \
-                  "┃🇮🇩┃ " + key + "Cek welcome\n" + \
-                  "┃🇮🇩┃ " + key + "Set sider:「Text」\n" + \
-                  "┃🇮🇩┃ " + key + "Set spam:「Text」\n" + \
-                  "┃🇮🇩┃ " + key + "Set pesan:「Text」\n" + \
-                  "┃🇮🇩┃ " + key + "Set respon:「Text」\n" + \
-                  "┃🇮🇩┃ " + key + "Set welcome:「Text」\n" + \
-                  "┃🇮🇩┃ " + key + "Myname:「Nama」\n" + \
-                  "┃🇮🇩┃ " + key + "Bot1name:「Nama」\n" + \
-                  "┃🇮🇩┃ " + key + "Bot2name:「Nama」\n" + \
-                  "┃🇮🇩┃ " + key + "Bot3name:「Nama」\n" + \
-                  "┃🇮🇩┃ " + key + "Bot1up「Kirim fotonya」\n" + \
-                  "┃🇮🇩┃ " + key + "Bot2up「Kirim fotonya」\n" + \
-                  "┃🇮🇩┃ " + key + "Bot3up「Kirim fotonya」\n" + \
-                  "┃🇮🇩┃ " + key + "Gift:「Mid korban」「Jumlah」\n" + \
-                  "┃🇮🇩┃ " + key + "Spam:「Mid korban」「Jumlah」\n" + \
-                  "╰━━━━━━━━━━━━━━━╯\n──┅━✥ ======= ✥━┅──\n┃🇮🇩┃ ┃DPK┃ FAMS┃🇮🇩┃\n──┅━✥ ======= ✥━┅──\n╭━━━━━━━━━━━━━━━╮\n┣🇮🇩━⏩ARIFISTIFIK🇮🇩━⏩\n╰━━━━━━━━━━━━━━━╯\n"
+    helpMessage1 = "──┅━✥ ======= ✥━┅──\n 黑單 \n──┅━✥ ======= ✥━┅──\n" + \
+                  "Blc 丟出黑單友資\n" + \
+                  "Ban:on 友資黑單\n" + \
+                  "Unban:on 友資解黑\n" + \
+                  "Ban「@」標註黑單\n" + \
+                  "Unban「@」標註解黑\n" + \
+                  "Talkban「@」標註禁言\n" + \
+                  "Untalkban「@」標註解禁\n" + \
+                  "Talkban:on 友資禁言\n" + \
+                  "Untalkban:on 友資解禁\n" + \
+                  "Banlist 查看黑單\n" + \
+                  "Talkbanlist 禁言名單\n" + \
+                  "Clearban 清除黑單\n" + \
+                  "Refresh 刷新\n" + \
+                  "──┅━✥ ======= ✥━┅──\n 笨盪設定 \n──┅━✥ ======= ✥━┅──\n" + \
+                  "Cek sider 已讀訊息\n" + \
+                  "Cek spam 騷擾訊息\n" + \
+                  "Cek pesan 加友訊息\n" + \
+                  "Cek respon 回復訊息\n" + \
+                  "Cek welcome 歡迎訊息\n" + \
+                  "Set sider:「文字」\n" + \
+                  "Set spam:「文字」\n" + \
+                  "Set pesan:「文字」\n" + \
+                  "Set respon:「文字」\n" + \
+                  "Set welcome:「文字」\n" + \
+                  "Myname:「名字」\n" + \
+                  "Bot1name:「名字」\n" + \
+                  "Bot2name:「名字」\n" + \
+                  "Bot3name:「名字」\n" + \
+                  "Bot1up「發送圖片」\n" + \
+                  "Bot2up「發送圖片」\n" + \
+                  "Bot3up「發送圖片」\n" + \
+                  "Gift:「mid」「次數」\n" + \
+                  "Spam:「mid」「次數」\n" + \
+                  "──┅━✥ ======= ✥━┅──\n 2018©莫言♡™ \n──┅━✥ ======= ✥━┅──\n"
     return helpMessage1
 
 def bot(op):
