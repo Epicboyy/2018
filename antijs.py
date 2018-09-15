@@ -37,10 +37,10 @@ sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 
 poll = LinePoll(cl)
 call = LineCall(cl)
-creator = ["ud296655acef67cbd5e8208e63629f78b"]
-owner = ["ud296655acef67cbd5e8208e63629f78b"]
-admin = ["ud296655acef67cbd5e8208e63629f78b"]
-staff = ["ud296655acef67cbd5e8208e63629f78b"]
+creator = ["ufe1707ae9b2ff7ab61505795b7995440"]
+owner = ["ufe1707ae9b2ff7ab61505795b7995440"]
+admin = ["ufe1707ae9b2ff7ab61505795b7995440"]
+staff = ["ufe1707ae9b2ff7ab61505795b7995440"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -121,11 +121,11 @@ wait = {
     "welcomeOn":False,
     "sticker":False,
     "selfbot":True,
-    "mention":"NGINTIPPP!!!",
-    "Respontag":"SEKARANG TAG BESOK JATUH CINTA",
-    "welcome":"Selamat datang & betah",
-    "comment":"Like like & like by ARIFISTIFIK",
-    "message":"Terimakasih sudah add saya 😃\n☆| ARIFISTIFIK |☆\n\nOpen Tikungan:\n┃🇮🇩┃ 1 hari 1000c\n┃🇮🇩┃ 1 minggu 2 juta 😁\n\nMinat?\nChat aja...",
+    "mention":"粗乃聊天(=ﾟωﾟ)ﾉ",
+    "Respontag":"我是莫言開發的防翻(v1)\n有事請找作者♪\nhttps://line.me/ti/p/4-LFlTx31f",
+    "welcome":"歡迎加入",
+    "comment":"666",
+    "message":"安安 感謝您加我好友\n我的作者:莫言♡\nhttps://line.me/ti/p/4-LFlTx31f",
     }
 
 read = {
@@ -151,7 +151,7 @@ Setmain = json.load(Setbot)
 
 mulai = time.time()
 
-tz = pytz.timezone("Asia/Jakarta")
+tz = pytz.timezone("Asia/Taipei")
 timeNow = datetime.now(tz=tz)
 
 def restart_program(): 
