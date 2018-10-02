@@ -37,10 +37,10 @@ sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 
 poll = LinePoll(cl)
 call = LineCall(cl)
-creator = ["ufe1707ae9b2ff7ab61505795b7995440","u2888443d25562a0d5a0c7fc2e5e4fe18"]
-owner = ["ufe1707ae9b2ff7ab61505795b7995440","u58d96dc9cbd102cc0c39c2373246a5a4","u2888443d25562a0d5a0c7fc2e5e4fe18"]
-admin = ["ufe1707ae9b2ff7ab61505795b7995440","u2888443d25562a0d5a0c7fc2e5e4fe18","u58d96dc9cbd102cc0c39c2373246a5a4","u52afe1d4ea5332242efacfeb9190d2a3","u4b9e74efaa8bb22757fa4499deddf06f","u4adfe266bf25f55cb801a2505dbbfd8c"]
-staff = ["ufe1707ae9b2ff7ab61505795b7995440","u58d96dc9cbd102cc0c39c2373246a5a4","u2888443d25562a0d5a0c7fc2e5e4fe18"]
+creator = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47"]
+owner = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe"]
+admin = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe"]
+staff = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -122,7 +122,7 @@ wait = {
     "sticker":False,
     "selfbot":True,
     "mention":"粗乃聊天(=ﾟωﾟ)ﾉ",
-    "Respontag":"此為防翻測試版\n有錯誤請找莫言♪",
+    "Respontag":"此為防翻測試版\n有錯誤請找尹莫♪",
     "welcome":"歡迎加入",
     "comment":"寶寶到此一遊",
     "message":"加我好友就要密我呦~\n聊出感情要對我負責喔（>﹏<）",
@@ -317,16 +317,16 @@ def help():
                   "Grouplist 所有群組\n" + \
                   "Infogroup「數字」群組資訊\n" + \
                   "Infomem「數字」成員資訊\n" + \
-                  "清理 清除訊息\n" + \
+                  "清除 清除訊息\n" + \
                   "sr/r已讀開/關\n" + \
                   "r查看已讀\n" + \
-                  "Sider「on/off」抓已讀\n" + \
+                  "r「on/off」抓潛水\n" + \
                   "Updatefoto 更改頭貼\n" + \
                   "Updategrup 更改群圖\n" + \
                   "Updatebot 更改機器頭貼\n" + \
                   "Broadcast:「文字」群組廣播\n" + \
                   "❂ 媒體指令 ❂ \n" + \
-                  "ID line:「Line Id」\n" + \
+                  "line id:「Line Id」\n" + \
                   "Sholat:「Nama Kota」\n" + \
                   "Cuaca:「Nama Kota」\n" + \
                   "Lokasi:「程式名稱」\n" + \
@@ -336,11 +336,12 @@ def help():
                   "Ytmp4:「影片」\n" + \
                   "Profileig:「IG名稱」\n" + \
                   "Cekdate:「tgl-bln-thn」\n" + \
-                  "Jumlah:「angka」\n" + \
+                  "tag:「次數」\n" + \
                   "Spamtag「@」騷擾標註\n" + \
                   "Spamcall:「次數」\n" + \
                   "Spamcall 邀通\n" + \
                   "❂ 群組指令 ❂ \n" + \
+                  "Allpro「on/off」全部保護開/關\n" + \
                   "Protecturl「on/off」網址保護\n" + \
                   "Protectjoin「on/off」入群保護\n" + \
                   "Protectkick「on/off」防翻保護\n" + \
@@ -354,22 +355,22 @@ def help():
                   "Autoleave「on/off」自離副本開/關\n" + \
                   "❂ 權限 ❂ \n" + \
                   "Admin:on 新增管理員\n" + \
-                  "Admin:repeat\n" + \
+                  "Admin:repeat 刪除管理員\n" + \
                   "Staff:on 新增第二權限\n" + \
-                  "Staff:repeat\n" + \
+                  "Staff:repeat 刪除第二權限\n" + \
                   "Bot:on 增加分機\n" + \
-                  "Bot:repeat\n" + \
+                  "Bot:repeat 刪除分機\n" + \
                   "Adminadd「@」新增管理員\n" + \
-                  "Admindell「@」刪除管理員\n" + \
+                  "Admindel「@」刪除管理員\n" + \
                   "Staffadd「@」新增第二權限\n" + \
-                  "Staffdell「@」刪除第二權限\n" + \
+                  "Staffdel「@」刪除第二權限\n" + \
                   "Botadd「@」新增分機\n" + \
-                  "Botdell「@」刪除分機\n" + \
+                  "Botdel「@」刪除分機\n" + \
                   "Refresh 刷新\n" + \
                   "Listbot 機器名單\n" + \
                   "Listadmin 權限者名單\n" + \
                   "Listprotect 防護項目\n" + \
-                  " 2018©莫言♡™ \n"
+                  " 2018©尹莫♡™ \n"
     return helpMessage
 
 def helpbot():
@@ -385,7 +386,7 @@ def helpbot():
                   "Untalkban「@」標註解禁\n" + \
                   "Talkban:on 友資禁言\n" + \
                   "Untalkban:on 友資解禁\n" + \
-                  "Banlist 查看黑單\n" + \
+                  "Banlist 黑名單\n" + \
                   "Talkbanlist 禁言名單\n" + \
                   "Clearban 清除黑單\n" + \
                   "Refresh 刷新\n" + \
@@ -407,9 +408,9 @@ def helpbot():
                   "Bot1up「發送圖片」\n" + \
                   "Bot2up「發送圖片」\n" + \
                   "Bot3up「發送圖片」\n" + \
-                  "Gift:「mid」「次數」\n" + \
+                  "Gift:「mid」「次數」擊敗指令\n" + \
                   "Spam:「mid」「次數」\n" + \
-                  " 2018©莫言♡™ \n"
+                  " 2018©尹莫♡™ \n"
     return helpMessage1
 
 def bot(op):
@@ -1227,7 +1228,7 @@ def bot(op):
                                 else: md+=" 友資關\n"
                                 if wait["talkban"] == True: md+=" 禁言開\n"
                                 else: md+=" 禁言關\n"
-                                if wait["detectMention"] == True: md+=" 回覆開"
+                                if wait["detectMention"] == True: md+=" 回覆開\n"
                                 else: md+=" 回覆關\n"
                                 if wait["autoJoin"] == True: md+=" 加群開\n"
                                 else: md+=" 加群關\n"
@@ -1249,7 +1250,7 @@ def bot(op):
 
                         elif cmd == "作者" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"↓ 我的作者:莫言") 
+                                cl.sendText(msg.to,"↓ 我的作者:尹莫") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
@@ -1258,7 +1259,7 @@ def bot(op):
                         elif cmd == "about" or cmd == "informasi":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "「 Yu v1 」\n")
+                               sendMention(msg.to, sender, "「 尹莫bot 」\n")
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'me':
@@ -1312,7 +1313,7 @@ def bot(op):
                                msg.contentMetadata = {'mid': Zmid}
                                cl.sendMessage1(msg)
 
-                        elif text.lower() == "莫言洗澡":
+                        elif text.lower() == "洗澎澎":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                try:
@@ -1320,7 +1321,7 @@ def bot(op):
                                except:
                                    pass
 
-                        elif text.lower() == "清理":
+                        elif text.lower() == "清除":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                try:
@@ -1328,7 +1329,7 @@ def bot(op):
                                    ki.removeAllMessages(op.param2)
                                    kk.removeAllMessages(op.param2)
                                    kc.removeAllMessages(op.param2)
-                                   cl.sendText(msg.to,"垃圾已清除(´･ω･`)")
+                                   cl.sendText(msg.to,"訊息已清除(´･ω･`)")
                                except:
                                    pass
 
@@ -1476,7 +1477,7 @@ def bot(op):
                                     kf.leaveGroup(i)
                                     kg.leaveGroup(i)
                                     kh.leaveGroup(i)
-                                    cl.sendMessage(msg.to,"再見囉～(^^) " +str(ginfo.name))
+                                    cl.sendMessage(msg.to,"狀態不好 撤退! " +str(ginfo.name))
 
                         elif cmd == "好友":
                           if wait["selfbot"] == True:
@@ -1668,52 +1669,52 @@ def bot(op):
                                nm1, nm2, nm3, nm4, jml = [], [], [], [], len(nama)
                                if jml <= 100:
                                    mentionMembers(msg.to, nama)
-                               if jml > 100 and jml < 200:
-                                   for i in range (0, 99):
+                               if jml > 20 and jml < 40:
+                                   for i in range (0, 20):
                                        nm1 += [nama[i]]
                                    mentionMembers(msg.to, nm1)
-                                   for j in range (100, len(nama)-1):
+                                   for j in range (20, len(nama)-1):
                                        nm2 += [nama[j]]
                                    mentionMembers(msg.to, nm2)
-                               if jml > 200 and jml < 300:
-                                   for i in range (0, 99):
+                               if jml > 40 and jml < 60:
+                                   for i in range (0, 20):
                                        nm1 += [nama[i]]
                                    mentionMembers(msg.to, nm1)
-                                   for j in range (100, 199):
+                                   for j in range (20, 40):
                                        nm2 += [nama[j]]
                                    mentionMembers(msg.to, nm2)
-                                   for k in range (200, len(nama)-1):
+                                   for k in range (40, len(nama)-1):
                                        nm3 += [nama[k]]
                                    mentionMembers(msg.to, nm3)
-                               if jml > 300 and jml < 400:
-                                   for i in range (0, 99):
+                               if jml > 60 and jml < 80:
+                                   for i in range (0, 20):
                                        nm1 += [nama[i]]
                                    mentionMembers(msg.to, nm1)
-                                   for j in range (100, 199):
+                                   for j in range (20, 40):
                                        nm2 += [nama[j]]
                                    mentionMembers(msg.to, nm2)
-                                   for k in range (200, 299):
+                                   for k in range (40, 60):
                                        nm3 += [nama[k]]
                                    mentionMembers(msg.to, nm3)
-                                   for l in range (300, len(nama)-1):
+                                   for l in range (80, len(nama)-1):
                                        nm4 += [nama[l]]
                                    mentionMembers(msg.to, nm4)
-                               if jml > 400 and jml < 500:
-                                   for i in range (0, 99):
+                               if jml > 80 and jml < 100:
+                                   for i in range (0, 20):
                                        nm1 += [nama[i]]
                                    mentionMembers(msg.to, nm1)
-                                   for j in range (100, 199):
+                                   for j in range (20, 40):
                                        nm2 += [nama[j]]
                                    mentionMembers(msg.to, nm2)
-                                   for k in range (200, 299):
+                                   for k in range (40, 60):
                                        nm3 += [nama[k]]
                                    mentionMembers(msg.to, nm3)
-                                   for l in range (300, 399):
+                                   for l in range (60, 80):
                                        nm4 += [nama[l]]
                                    mentionMembers(msg.to, nm4)
-                                   for m in range (400, len(nama)-1):
+                                   for m in range (80, len(nama)-1):
                                        nm5 += [nama[m]]
-                                   mentionMembers(msg.to, nm5)
+                                   mentionMembers(msg.to, nm4)
 
                         elif cmd == "listbot":
                           if wait["selfbot"] == True:
@@ -1724,7 +1725,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to," 莫言のbot\n\n"+ma+"\n總共有「%s」個機器倫" %(str(len(Bots))))
+                                cl.sendMessage(msg.to," 尹莫のbot\n\n"+ma+"\n總共有「%s」個機器倫" %(str(len(Bots))))
 
                         elif cmd == "listadmin":
                           if wait["selfbot"] == True:
@@ -1747,7 +1748,7 @@ def bot(op):
                                     c = c + 1
                                     end = '\n'
                                     mc += str(c) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to," 權限者名單\n\n作者:\n"+ma+"\n管理員:\n"+mb+"\n第二權限:\n"+mc+"\n↑Yu權限持有者" %(str(len(owner)+len(admin)+len(staff))))
+                                cl.sendMessage(msg.to," 權限者名單\n\n作者:\n"+ma+"\n管理員:\n"+mb+"\n第二權限:\n"+mc+"\n總共「%s」權限者" %(str(len(owner)+len(admin)+len(staff))))
 
                         elif cmd == "listprotect":
                           if wait["selfbot"] == True:
@@ -1821,7 +1822,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
-                                ki.sendText(msg.to, "再見囉～(^^) "+str(G.name))
+                                ki.sendText(msg.to, "小弟先閃囉～(^^) "+str(G.name))
                                 ki.leaveGroup(msg.to)
                                 kk.leaveGroup(msg.to)
                                 kc.leaveGroup(msg.to)
@@ -1830,7 +1831,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
-                                cl.sendText(msg.to, "再見囉～(^^) "+str(G.name))
+                                cl.sendText(msg.to, "ㄧㄇ本宮先撤囉～(^^) "+str(G.name))
                                 cl.leaveGroup(msg.to)
 
                         elif cmd.startswith("leave "):
@@ -1841,13 +1842,13 @@ def bot(op):
                                 for i in gid:
                                     h = cl.getGroup(i).name
                                     if h == ng:
-                                        ki.sendMessage(i, "莫言說我該退休惹(´･ω･`)")
+                                        ki.sendMessage(i, "是時候該退休惹(´･ω･`)")
                                         ki.leaveGroup(i)
                                         kk.leaveGroup(i)
                                         kc.leaveGroup(i)
-                                        cl.sendMessage(to,"再見囉～(´･ω･`) " +h)
+                                        cl.sendMessage(to,"有緣再見囉～(´･ω･`) " +h)
 
-                        elif cmd == "哈利波特":
+                        elif cmd == "小弟1":
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 ginfo = cl.getGroup(msg.to)
@@ -1860,7 +1861,7 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 ki.updateGroup(G)
 
-                        elif cmd == "榮恩":
+                        elif cmd == "小弟2":
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 ginfo = cl.getGroup(msg.to)
@@ -1873,7 +1874,7 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 kk.updateGroup(G)
 
-                        elif cmd == "妙麗":
+                        elif cmd == "小弟3":
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
                                 ginfo = cl.getGroup(msg.to)
@@ -2001,7 +2002,7 @@ def bot(op):
                               try:
                                   tz = pytz.timezone("Asia/Taipei")
                                   timeNow = datetime.now(tz=tz)
-                                  cl.sendMessage(msg.to, "我知道誰已讀喔（>﹏<）\n\n日期 : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n時間 [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                  cl.sendMessage(msg.to, "已讀粗乃喔（>﹏<）\n\n日期 : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n時間 [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                                   del cctv['point'][msg.to]
                                   del cctv['sidermem'][msg.to]
                                   del cctv['cyduk'][msg.to]
@@ -2018,7 +2019,7 @@ def bot(op):
                                   tz = pytz.timezone("Asia/Taipei")
                                   timeNow = datetime.now(tz=tz)
                                   cctv['cyduk'][msg.to]=False
-                                  cl.sendMessage(msg.to, "抓姦結束（>﹏<）\n\n日期 : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n時間 [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                  cl.sendMessage(msg.to, "不玩你們惹吶（>﹏<）\n\n日期 : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n時間 [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                               else:
                                   cl.sendMessage(msg.to, "沒人屌我")
 
@@ -2263,14 +2264,14 @@ def bot(op):
                             zodiak = data["data"]["zodiak"]
                             cl.sendMessage(msg.to," I N F O R M A S I \n\n"+" Date Of Birth : "+lahir+"\n Age : "+usia+"\n Ultah : "+ultah+"\n Zodiak : "+zodiak)
 
-                        elif cmd.startswith("jumlah: "):
+                        elif cmd.startswith("tag: "):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                                 proses = text.split(":")
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
                                 Setmain["RAlimit"] = num
-                                cl.sendText(msg.to,"Total Spamtag Diubah Menjadi " +strnum)
+                                cl.sendText(msg.to,"騷擾標註 " +strnum)
 
                         elif cmd.startswith("spamcall: "):
                           if wait["selfbot"] == True:
@@ -2279,7 +2280,7 @@ def bot(op):
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
                                 wait["limit"] = num
-                                cl.sendText(msg.to,"Total Spamcall Diubah Menjadi " +strnum)
+                                cl.sendText(msg.to,"邀請群通 " +strnum)
 
                         elif cmd.startswith("spamtag "):
                           if wait["selfbot"] == True:
@@ -2308,7 +2309,7 @@ def bot(op):
                                             except Exception as e:
                                                 cl.sendText(msg.to,str(e))
                                     else:
-                                        cl.sendText(msg.to,"Jumlah melebihi 1000")
+                                        cl.sendText(msg.to,"超出限制")
                                         
                         elif cmd == "spamcall":
                           if wait["selfbot"] == True:
@@ -2326,7 +2327,7 @@ def bot(op):
                                      except Exception as e:
                                         cl.sendText(msg.to,str(e))
                                 else:
-                                    cl.sendText(msg.to,"Jumlah melebihi batas")
+                                    cl.sendText(msg.to,"超出限制")
 
                         elif 'Gift: ' in msg.text:
                           if wait["selfbot"] == True:
@@ -2466,9 +2467,9 @@ def bot(op):
                                          msgs = "邀請保護未啟用"
                                     cl.sendMessage(msg.to, "「未啟用」\n" + msgs)
 
-                        elif 'Semua pro ' in msg.text:
+                        elif 'Allpro ' in msg.text:
                            if msg._from in admin:
-                              spl = msg.text.replace('Semua pro ','')
+                              spl = msg.text.replace('Allpro ','')
                               if spl == 'on':
                                   if msg.to in protectqr:
                                        msgs = ""
@@ -2488,7 +2489,7 @@ def bot(op):
                                   else:
                                       protectcancel.append(msg.to)
                                       ginfo = cl.getGroup(msg.to)
-                                      msgs = "成功激活所有保護\n此群組 : " +str(ginfo.name)
+                                      msgs = "防翻/網址/邀請/進群保護已開啟\n此群組 : " +str(ginfo.name)
                                   cl.sendMessage(msg.to, "「啟用中」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectqr:
@@ -2509,8 +2510,8 @@ def bot(op):
                                          msgs = "全部保護未開啟\n此群組 : " +str(ginfo.name)
                                     else:
                                          ginfo = cl.getGroup(msg.to)
-                                         msgs = "全部保護未啟用\n此群組 : " +str(ginfo.name)
-                                    cl.sendMessage(msg.to, "「未啟用」\n" + msgs)
+                                         msgs = "此群組未受保護\n此群組 : " +str(ginfo.name)
+                                    cl.sendMessage(msg.to, "「危險!」\n" + msgs)
 
 #===========KICKOUT============#
                         elif ("Nk " in msg.text):
@@ -2538,7 +2539,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("踢 " in msg.text):
+                        elif ("T " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -2599,7 +2600,7 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("Admindell " in msg.text):
+                        elif ("Admindel " in msg.text):
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]
@@ -2610,11 +2611,11 @@ def bot(op):
                                    if target not in Saints:
                                        try:
                                            admin.remove(target)
-                                           cl.sendMessage(msg.to,"您沒有權限(´･ω･`)")
+                                           cl.sendMessage(msg.to,"拔除您管理員權限(´･ω･`)")
                                        except:
                                            pass
 
-                        elif ("Staffdell " in msg.text):
+                        elif ("Staffdel " in msg.text):
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]
@@ -2625,11 +2626,11 @@ def bot(op):
                                    if target not in Saints:
                                        try:
                                            staff.remove(target)
-                                           cl.sendMessage(msg.to,"您沒有權限(´･ω･`)")
+                                           cl.sendMessage(msg.to,"拔除您的權限(´･ω･`)")
                                        except:
                                            pass
 
-                        elif ("Botdell " in msg.text):
+                        elif ("Botdel " in msg.text):
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key["MENTIONEES"][0]["M"]
@@ -2647,32 +2648,32 @@ def bot(op):
                         elif cmd == "admin:on" or text.lower() == 'admin:on':
                             if msg._from in admin:
                                 wait["addadmin"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資新增管理員")
 
                         elif cmd == "admin:repeat" or text.lower() == 'admin:repeat':
                             if msg._from in admin:
                                 wait["delladmin"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資刪除管理員")
 
                         elif cmd == "staff:on" or text.lower() == 'staff:on':
                             if msg._from in admin:
                                 wait["addstaff"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資新增權限")
 
                         elif cmd == "staff:repeat" or text.lower() == 'staff:repeat':
                             if msg._from in admin:
                                 wait["dellstaff"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資刪除權限")
 
                         elif cmd == "bot:on" or text.lower() == 'bot:on':
                             if msg._from in admin:
                                 wait["addbots"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資新增分機")
 
                         elif cmd == "bot:repeat" or text.lower() == 'bot:repeat':
                             if msg._from in admin:
                                 wait["dellbots"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資刪除分機")
 
                         elif cmd == "refresh" or text.lower() == 'refresh':
                             if msg._from in admin:
@@ -2714,7 +2715,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Mentionkick"] = True
-                                cl.sendText(msg.to,"禁止標註已開啟")
+                                cl.sendText(msg.to,"禁止標註我!!!")
 
                         elif cmd == "notag off" or text.lower() == 'notag off':
                           if wait["selfbot"] == True:
@@ -2841,13 +2842,13 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Talkwblacklist"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資禁言")
 
                         elif cmd == "untalkban:on" or text.lower() == 'untalkban:on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Talkdblacklist"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資解禁")
 
                         elif ("Ban " in msg.text):
                           if wait["selfbot"] == True:
@@ -2883,7 +2884,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["wblacklist"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資黑單")
 
                         elif cmd == "unban:on" or text.lower() == 'unban:on':
                           if wait["selfbot"] == True:
@@ -2923,7 +2924,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if wait["blacklist"] == {}:
-                                    cl.sendMessage(msg.to,"尚未有黑名單")
+                                    cl.sendMessage(msg.to,"尚未有黑名單(´･ω･`)")
                               else:
                                     ma = ""
                                     for i in wait["blacklist"]:
@@ -2942,10 +2943,10 @@ def bot(op):
                            if msg._from in admin:
                               spl = msg.text.replace('Set pesan: ','')
                               if spl in [""," ","\n",None]:
-                                  cl.sendMessage(msg.to, "無法更改私聊")
+                                  cl.sendMessage(msg.to, "無法更改加友訊息")
                               else:
                                   wait["message"] = spl
-                                  cl.sendMessage(msg.to, "「私聊」\n訊息更改為 :\n\n「{}」".format(str(spl)))
+                                  cl.sendMessage(msg.to, "「加友訊息」\n訊息更改為 :\n\n「{}」".format(str(spl)))
 
                         elif 'Set welcome: ' in msg.text:
                            if msg._from in admin:
@@ -2985,7 +2986,7 @@ def bot(op):
 
                         elif text.lower() == "cek pesan":
                             if msg._from in admin:
-                               cl.sendMessage(msg.to, "「私聊」\n訊息 :\n\n「 " + str(wait["message"]) + " 」")
+                               cl.sendMessage(msg.to, "「加友訊息」\n訊息 :\n\n「 " + str(wait["message"]) + " 」")
 
                         elif text.lower() == "cek welcome":
                             if msg._from in admin:
@@ -3001,7 +3002,7 @@ def bot(op):
 
                         elif text.lower() == "cek sider":
                             if msg._from in admin:
-                               cl.sendMessage(msg.to, "「抓已讀」\n訊息 :\n\n「 " + str(wait["mention"]) + " 」")
+                               cl.sendMessage(msg.to, "「抓潛水」\n訊息 :\n\n「 " + str(wait["mention"]) + " 」")
 
 #===========JOIN TICKET============#
                         elif "/ti/g/" in msg.text.lower():
@@ -3017,13 +3018,13 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = cl.findGroupByTicket(ticket_id)
                                      cl.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     cl.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     cl.sendMessage(msg.to, "窩偷偷跑進乃惹 : %s" % str(group.name))
                                      group1 = ki.findGroupByTicket(ticket_id)
                                      ki.acceptGroupInvitationByTicket(group1.id,ticket_id)
-                                     ki.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     ki.sendMessage(msg.to, "窩偷偷跑進乃惹 : %s" % str(group.name))
                                      group2 = kk.findGroupByTicket(ticket_id)
                                      kk.acceptGroupInvitationByTicket(group2.id,ticket_id)
-                                     kk.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     kk.sendMessage(msg.to, "窩偷偷跑進乃惹 : %s" % str(group.name))
                                      group3 = kc.findGroupByTicket(ticket_id)
                                      kc.acceptGroupInvitationByTicket(group3.id,ticket_id)
                                      kc.sendMessage(msg.to, "Masuk : %s" % str(group.name))
