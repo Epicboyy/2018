@@ -38,9 +38,9 @@ sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 poll = LinePoll(cl)
 call = LineCall(cl)
 creator = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47"]
-owner = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe"]
-admin = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe"]
-staff = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe"]
+owner = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe","u5c151c16b73f3c4d964ee92d4d9c7029"]
+admin = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe","u5c151c16b73f3c4d964ee92d4d9c7029"]
+staff = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe","u5c151c16b73f3c4d964ee92d4d9c7029"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -341,7 +341,7 @@ def help():
                   "Spamcall:「次數」\n" + \
                   "Spamcall 邀通\n" + \
                   "❂ 群組指令 ❂ \n" + \
-                  "Allpro「on/off」全部保護開/關\n" + \
+                  "mpro「on/off」全部保護開/關\n" + \
                   "Protecturl「on/off」網址保護\n" + \
                   "Protectjoin「on/off」入群保護\n" + \
                   "Protectkick「on/off」防翻保護\n" + \
@@ -377,7 +377,7 @@ def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage1 = "❂ 黑單 ❂ \n" + \
-                  "Blc 丟出黑單友資\n" + \
+                  "Bl 丟出黑單友資\n" + \
                   "Ban:on 友資黑單\n" + \
                   "Unban:on 友資解黑\n" + \
                   "Ban「@」標註黑單\n" + \
@@ -1790,7 +1790,7 @@ def bot(op):
                                 kk.sendMessage(msg.to,responsename2)
                                 kc.sendMessage(msg.to,responsename3)
 
-                        elif cmd == "invitebot":
+                        elif cmd == "invbot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
@@ -2271,18 +2271,18 @@ def bot(op):
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
                                 Setmain["RAlimit"] = num
-                                cl.sendText(msg.to,"騷擾標註 " +strnum)
+                                cl.sendText(msg.to,"標註 " +strnum)
 
-                        elif cmd.startswith("spamcall: "):
+                        elif cmd.startswith("call: "):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                                 proses = text.split(":")
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
                                 wait["limit"] = num
-                                cl.sendText(msg.to,"邀請群通 " +strnum)
+                                cl.sendText(msg.to,"邀通 " +strnum)
 
-                        elif cmd.startswith("spamtag "):
+                        elif cmd.startswith("tag "):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                                 if 'MENTION' in msg.contentMetadata.keys()!=None:
@@ -2311,7 +2311,7 @@ def bot(op):
                                     else:
                                         cl.sendText(msg.to,"超出限制")
                                         
-                        elif cmd == "spamcall":
+                        elif cmd == "call":
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                              if msg.toType == 2:
@@ -2467,9 +2467,9 @@ def bot(op):
                                          msgs = "邀請保護未啟用"
                                     cl.sendMessage(msg.to, "「未啟用」\n" + msgs)
 
-                        elif 'Allpro ' in msg.text:
+                        elif 'mpro ' in msg.text:
                            if msg._from in admin:
-                              spl = msg.text.replace('Allpro ','')
+                              spl = msg.text.replace('mpro ','')
                               if spl == 'on':
                                   if msg.to in protectqr:
                                        msgs = ""
