@@ -2890,7 +2890,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["dblacklist"] = True
-                                cl.sendText(msg.to,"請傳送好友資料")
+                                cl.sendText(msg.to,"請傳送友資解黑")
 
                         elif cmd == "banlist" or text.lower() == 'banlist':
                           if wait["selfbot"] == True:
@@ -2920,7 +2920,7 @@ def bot(op):
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to," 禁言用戶\n\n"+ma+"\n↑總共「%s」被禁言" %(str(len(wait["Talkblacklist"]))))
 
-                        elif cmd == "blc" or text.lower() == 'blc':
+                        elif cmd == "bl" or text.lower() == 'bl':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if wait["blacklist"] == {}:
@@ -2931,12 +2931,12 @@ def bot(op):
                                         ma = cl.getContact(i)
                                         cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
-                        elif cmd == "clearban" or text.lower() == 'clearban':
+                        elif cmd == "cban" or text.lower() == 'cban':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               wait["blacklist"] = {}
                               ragets = cl.getContacts(wait["blacklist"])
-                              mc = "「%i」User Blacklist" % len(ragets)
+                              mc = "「%i」黑名單" % len(ragets)
                               cl.sendMessage(msg.to,"黑單已清空 " +mc)
 #===========COMMAND SET============#
                         elif 'Set pesan: ' in msg.text:
