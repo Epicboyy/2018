@@ -337,9 +337,9 @@ def help():
                   "Profileig:「IG名稱」\n" + \
                   "Cekdate:「tgl-bln-thn」\n" + \
                   "tag:「次數」\n" + \
-                  "Spamtag「@」騷擾標註\n" + \
-                  "Spamcall:「次數」\n" + \
-                  "Spamcall 邀通\n" + \
+                  "tag「@」騷擾標註\n" + \
+                  "call:「次數」\n" + \
+                  "call 邀通\n" + \
                   "❂ 群組指令 ❂ \n" + \
                   "mpro「on/off」全部保護開/關\n" + \
                   "Protecturl「on/off」網址保護\n" + \
@@ -388,7 +388,7 @@ def helpbot():
                   "Untalkban:on 友資解禁\n" + \
                   "Banlist 黑名單\n" + \
                   "Talkbanlist 禁言名單\n" + \
-                  "Clearban 清除黑單\n" + \
+                  "Cban 清除黑單\n" + \
                   "Refresh 刷新\n" + \
                   "❂ 笨盪設定 ❂ \n" + \
                   "Cek sider 已讀訊息\n" + \
