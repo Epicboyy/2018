@@ -17,9 +17,8 @@
 - `sudo pip3 install wikipedia`
 - `sudo pip3 install tweepy`
 - `sudo pip3 install youtube_dl`
-- `git clone https://github.com/arifistifik/2019`
-- `cd 2019`
-- `python antijs.py`
+- `cd 2018`
+- `python3 antijs.py`
 
 TERMUX :
 - `pkg update`
@@ -38,12 +37,10 @@ TERMUX :
 - `pip3 install wikipedia`
 - `pip3 install youtube_dl`
 - `pip3 install tweepy`
-- `git clone https://github.com/arifistifik/2019`
-- `cd 2019`
-- `python3 antijs.py`
+- `cd 2018`
+- `python antijs.py`
 
 
-EDITOR BY ARIFISTIFIK
 
 
 
