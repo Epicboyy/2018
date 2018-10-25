@@ -37,7 +37,7 @@ sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 
 poll = LinePoll(cl)
 call = LineCall(cl)
-creator = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47"]
+creator = ["ufe1707ae9b2ff7ab61505795b7995440"]
 owner = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe","u5c151c16b73f3c4d964ee92d4d9c7029"]
 admin = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe","u5c151c16b73f3c4d964ee92d4d9c7029"]
 staff = ["ufe1707ae9b2ff7ab61505795b7995440","u1d7ac2cd6a03bc2b179d9a0fb4d11e47","u41fbf3c903ea9e613211785144f933fe","u5c151c16b73f3c4d964ee92d4d9c7029"]
